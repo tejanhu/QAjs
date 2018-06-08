@@ -2,479 +2,479 @@
 
 <head>
 
-    <style>
-    
-    #std{
-        margin-top:10;
-    }
+	<style>
 
-    #sci{
-        margin-top:10;
-        margin-left:155;
-    }
+	#std{
+		margin-top:10;
+	}
 
-    #input_field{
-     width: 335px;
-     height: 50px;
- }
- #input_field-text_form{
-    margin-top:10;                       
-    width: 335px;
-    height: 50px;
-}
-.btn{
-    background-color:	#FFFACD;
-    width: 80px;
-    height: 70px;
-}
-#container{
-    margin-left:530;
-    margin-top:50;
+	#sci{
+		margin-top:10;
+		margin-left:155;
+	}
 
-}
+	#input_field{
+		width: 335px;
+		height: 50px;
+	}
+	#input_field-text_form{
+		margin-top:10;                       
+		width: 335px;
+		height: 50px;
+	}
+	.btn{
+		background-color:	#FFFACD;
+		width: 80px;
+		height: 70px;
+	}
+	#container{
+		margin-left:530;
+		margin-top:50;
+
+	}
 </style>
 
 </head>
 <body onload="hideSciBtns()">
 
 
-    <div id="container">
-        <form name="F">
+	<div id="container">
+		<form name="F">
 
-            <table name="MrT">
-                <tr ><input type="text" id="input_field" name="input_data"><br>
-                    <input type="text" id="input_field-text_form"><br>
-                    <input type="button" id="std" value="STANDARD" onclick="hideSciBtns()">
-                    <input type="button" id="sci" value="SCIENTIFIC" onclick="showSciBtns()">
-                </tr>
-                <tr>
-                    <td><input class="btn" id="b0" type="button" value="0" onclick="updateScreen(0)"></td>
-                    <td><input class="btn" id="b1" type="button" value="1" onclick="updateScreen(1)"></td>
-                    <td><input class="btn" id="b2" type="button" value="2" onclick="updateScreen(2)"></td>
-                    <td><input class="btn" type="button" value="+" onclick="add()"></td>
-                </tr>
-                <tr>
-                    <td><input class="btn" id="b3" type="button" value="3" onclick="updateScreen(3)"></td>
-                    <td><input class="btn" id="b4" type="button" value="4" onclick="updateScreen(4)"></td>
-                    <td><input class="btn" id="b5" type="button" value="5" onclick="updateScreen(5)"></td>
-                    <td><input class="btn" type="button" value="-" onclick="minus()"></td>
-                </tr>
-                <tr>
-                    <td><input class="btn" id="b6" type="button" value="6" onclick="updateScreen(6)"></td>
-                    <td><input class="btn" id="b7" type="button" value="7" onclick="updateScreen(7)"></td>
-                    <td><input class="btn" id="b8" type="button" value="8" onclick="updateScreen(8)"></td>
-                    <td><input class="btn" type="button" value="/" onclick="divide()"></td>
-                </tr>
-                <tr>
-                    <td><input class="btn" id="b9" type="button" value="9" onclick="updateScreen(9)"></td>
-                    <td><input class="btn" type="button" value="=" onclick="operations()"></td>
-                    <td><input class="btn" type="button" value="C" onclick="setClear()"></td>
-                    <td><input class="btn" type="button" value="*" onclick="multiply()"></td>
-                    <td><input class="btn" type="button" value="." onclick=""></td>
-                </tr>
-                <tr>
-                    <td><input class="btn" id="bMC" type="button" value="MC" onclick=""></td>
-                    <td><input class="btn" id="bMR" type="button" value="MR" onclick=""></td>
-                    <td><input class="btn" id="bMplus" type="button" value="M+" onclick=""></td>
-                    <td><input class="btn" id="bMminus" type="button" value="M-" onclick=""></td>
-                </tr>
+			<table name="MrT">
+				<tr ><input type="text" id="input_field" name="input_data"><br>
+					<input type="text" id="input_field-text_form"><br>
+					<input type="button" id="std" value="STANDARD" onclick="hideSciBtns()">
+					<input type="button" id="sci" value="SCIENTIFIC" onclick="showSciBtns()">
+				</tr>
+				<tr>
+					<td><input class="btn" id="b0" type="button" value="0" onclick="updateScreen(0)"></td>
+					<td><input class="btn" id="b1" type="button" value="1" onclick="updateScreen(1)"></td>
+					<td><input class="btn" id="b2" type="button" value="2" onclick="updateScreen(2)"></td>
+					<td><input class="btn" type="button" value="+" onclick="add()"></td>
+				</tr>
+				<tr>
+					<td><input class="btn" id="b3" type="button" value="3" onclick="updateScreen(3)"></td>
+					<td><input class="btn" id="b4" type="button" value="4" onclick="updateScreen(4)"></td>
+					<td><input class="btn" id="b5" type="button" value="5" onclick="updateScreen(5)"></td>
+					<td><input class="btn" type="button" value="-" onclick="minus()"></td>
+				</tr>
+				<tr>
+					<td><input class="btn" id="b6" type="button" value="6" onclick="updateScreen(6)"></td>
+					<td><input class="btn" id="b7" type="button" value="7" onclick="updateScreen(7)"></td>
+					<td><input class="btn" id="b8" type="button" value="8" onclick="updateScreen(8)"></td>
+					<td><input class="btn" type="button" value="/" onclick="divide()"></td>
+				</tr>
+				<tr>
+					<td><input class="btn" id="b9" type="button" value="9" onclick="updateScreen(9)"></td>
+					<td><input class="btn" type="button" value="=" onclick="operations()"></td>
+					<td><input class="btn" type="button" value="C" onclick="setClear()"></td>
+					<td><input class="btn" type="button" value="*" onclick="multiply()"></td>
+					<td><input class="btn" type="button" value="." onclick="concatDecimal()"></td>
+				</tr>
+				<tr>
+					<td><input class="btn" id="bMC" type="button" value="MC" onclick=""></td>
+					<td><input class="btn" id="bMR" type="button" value="MR" onclick=""></td>
+					<td><input class="btn" id="bMplus" type="button" value="M+" onclick=""></td>
+					<td><input class="btn" id="bMminus" type="button" value="M-" onclick=""></td>
+				</tr>
 
-                <tr id="sci-btns">
-                    <td><input class="btn" id="bSin" type="button" value="SIN" onclick="sine()"></td>
-                    <td><input class="btn" id="bCos" type="button" value="COS" onclick="cosine()"></td>
-                    <td><input class="btn" id="bTan" type="button" value="TAN" onclick="tan()"></td>
-                </tr>
-            </table>
+				<tr id="sci-btns">
+					<td><input class="btn" id="bSin" type="button" value="SIN" onclick="sine()"></td>
+					<td><input class="btn" id="bCos" type="button" value="COS" onclick="cosine()"></td>
+					<td><input class="btn" id="bTan" type="button" value="TAN" onclick="tan()"></td>
+				</tr>
+			</table>
 
 
-        </form>
-    </div>
+		</form>
+	</div>
 </body>
 
 <script>
-    var no1,no2,res,w,w2;
-    var overwrite = true;
-    var operator;
-    var register;
-    no1=no2="";
- // var sci_btns = document.getElementsByClassName("sci-btn");
+	var no1,no2,res,w,w2;
+	var overwrite = true;
+	var operator;
+	var register;
+	no1=no2="";
+	var decimal = "";
+// updates the screen
+function updateScreen(num){
+	w = window.document.F.input_data;
 
- function updateScreen(num){
-    w = window.document.F.input_data;
-
-    if(overwrite){
-        w.value = num;
-        overwrite = false;
-    }
-    else{
-        w.value = (w.value * 10) + num;
-    }
+	if(overwrite){
+		w.value = num;
+		overwrite = false;
+	}
+	else{
+		w.value = (w.value * 10) + num;
+	}
 }
-
+// calculates the addition operation
 function add(){
-    w = window.document.F.input_data;
-    no1 = w.value;
-    if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+	w = window.document.F.input_data;
+	no1 = w.value;
+	if(no1.includes(".")){
+		no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+	}
+	else{
+		no1 = parseInt(w.value);
+	} 
 
- operator = "add";
- overwrite = true;
+	operator = "add";
+	overwrite = true;
 
-}  
+}
+// calculates the subtraction operation  
 function minus(){
-    w = window.document.F.input_data;
-    no1 = w.value;
-    if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+	w = window.document.F.input_data;
+	no1 = w.value;
+	if(no1.includes(".")){
+		no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+	}
+	else{
+		no1 = parseInt(w.value);
+	} 
 
- operator = "minus";
- overwrite = true;
+	operator = "minus";
+	overwrite = true;
 
-}  
+}
+// calculates the multiplication operation  
 function multiply(){
-    w = window.document.F.input_data;
-    no1 = w.value;
-    if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+	w = window.document.F.input_data;
+	no1 = w.value;
+	if(no1.includes(".")){
+		no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
-
-  // no1 = parseInt(w.value);
-  operator = "multiply";
-  overwrite = true;
+	}
+	else{
+		no1 = parseInt(w.value);
+	} 
+	operator = "multiply";
+	overwrite = true;
 
 }
+// executes the division operation
 function divide(){
-    w = window.document.F.input_data;
-    no1 = w.value;
-    if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+	w = window.document.F.input_data;
+	no1 = w.value;
+	if(no1.includes(".")){
+		no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
-
-  // no1 = parseInt(w.value);
-  operator = "divide";
-  overwrite = true;
+	}
+	else{
+		no1 = parseInt(w.value);
+	} 
+	operator = "divide";
+	overwrite = true;
 
 }
+// executes the COS operation
 function cosine(){
-    alert("helloCos");
-    // window.document.F.input_data.value=math.parseInt(parseInt(window.document.F.input_data.value));
 
-    w = window.document.F.input_data;
-    no1 = w.value;
-    no1 = parseFloat(w.value); 
+	w = window.document.F.input_data;
+	no1 = w.value;
+	no1 = parseFloat(w.value); 
 
-  // no1 = parseInt(w.value);
-  operator = "COSINE";
-  overwrite = true;
+	operator = "COSINE";
+	overwrite = true;
 
 }
+// executes the SINE operation
 function sine(){
-    alert("helloSin");
-    w = window.document.F.input_data;
-    no1 = w.value;
-    no1 = parseFloat(w.value); 
+	alert("helloSin");
+	w = window.document.F.input_data;
+	no1 = w.value;
+	no1 = parseFloat(w.value); 
 
-  // no1 = parseInt(w.value);
-  operator = "SINE";
-  overwrite = true;
+	operator = "SINE";
+	overwrite = true;
 
 }
+function concatDecimal(){
+	w = window.document.F.input_data;
+	decimal = ".";
+	no1 = parseFloat(w.value.toString()+decimal+window.document.F.input_data.value);
+}
+// executes the TAN operation
 function tan(){
-    alert("helloTan");               
-    w = window.document.F.input_data;
-    no1 = w.value;
+	alert("helloTan");               
+	w = window.document.F.input_data;
+	no1 = w.value;
 
-    no1 = parseFloat(w.value);
-
-  // no1 = parseInt(w.value);
-  operator = "TAN";
-  overwrite = true;
+	no1 = parseFloat(w.value);
+	operator = "TAN";
+	overwrite = true;
 
 }
 function setClear(){
-  w.value = "";
-  document.getElementById("input_field-text_form").value="";
-  overwrite = true;
+	w.value = "";
+	document.getElementById("input_field-text_form").value="";
+	overwrite = true;
 }  
 
+// returns the result from operators
 function operations(){
-   no1 = no1.toString();
-   no2 = w.value.toString();
-   console.log(no1);
-   console.log(no2);
-   switch(operator)
-   {
-       case'add':
-       if(no1.includes(".") && no2.includes(".")){
-           no2 = parseFloat(w.value);
-           res = (parseFloat(no1)+no2);
-       }
-       else{
-        no1 = parseInt(w.value);
-        no2 = parseInt(w.value);
-        res = parseInt(no1+no2);
-    }  
-    w.value = res;
-    overwrite = true;
-    convertNumToText();
+	no1 = no1.toString();
+	no2 = w.value.toString();
+	console.log(no1);
+	console.log(no2);
+	switch(operator)
+	{
+		case'add':
+		if(no1.includes(".") && no2.includes(".")){
+			no2 = parseFloat(w.value);
+			res = (parseFloat(no1)+no2);
+		}
+		else{
+			no1 = parseInt(w.value);
+			no2 = parseInt(w.value);
+			res = parseInt(no1+no2);
+		}  
+		w.value = res;
+		overwrite = true;
+		convertNumToText();
 
-    break;
+		break;
 
-    case 'minus':
+		case 'minus':
 
-    if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)-no2);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1-no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+		if(no1.includes(".") && no2.includes(".")){
+			no1 = parseFloat(w.value);
+			no2 = parseFloat(w.value);
+			res = (parseFloat(no1)-no2);
+		}
+		else{
+			no1 = parseInt(w.value);
+			no2 = parseInt(w.value);
+			res = parseInt(no1-no2);
+		}  
+		w.value = res;
+		overwrite = true;
+		convertNumToText();
 
-   break;
+		break;
 
-   case 'multiply':
+		case 'multiply':
 
-   if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)*no2);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1*no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+		if(no1.includes(".") && no2.includes(".")){
+			no1 = parseFloat(w.value);
+			no2 = parseFloat(w.value);
+			res = (parseFloat(no1)*no2);
+		}
+		else{
+			no1 = parseInt(w.value);
+			no2 = parseInt(w.value);
+			res = parseInt(no1*no2);
+		}  
+		w.value = res;
+		overwrite = true;
+		convertNumToText();
 
-   break;
+		break;
 
-   case 'divide':
+		case 'divide':
 
-   if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)/no2);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1/no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+		if(no1.includes(".") && no2.includes(".")){
+			no1 = parseFloat(w.value);
+			no2 = parseFloat(w.value);
+			res = (parseFloat(no1)/no2);
+		}
+		else{
+			no1 = parseInt(w.value);
+			no2 = parseInt(w.value);
+			res = parseInt(no1/no2);
+		}  
+		w.value = res;
+		overwrite = true;
+		convertNumToText();
 
-   break;
+		break;
 
-   case 'COSINE':
+		case 'COSINE':
 
-   no1 = Math.cos(parseFloat(no1));
+		no1 = Math.cos(parseFloat(no1));
 
-   
-   w.value = no1;
-   overwrite = true;
-   convertNumToText();
 
-   break;
+		w.value = no1;
+		overwrite = true;
+		convertNumToText();
 
-   case 'SINE':
+		break;
 
-   
-   no1 = Math.sin(parseFloat(no1));
-   
-   w.value = no1;
-   overwrite = true;
-   convertNumToText();
+		case 'SINE':
 
-   break;
 
-   case 'TAN':
+		no1 = Math.sin(parseFloat(no1));
 
-   no1 = Math.tan(parseFloat(no1));
+		w.value = no1;
+		overwrite = true;
+		convertNumToText();
 
-   w.value = no1;
-   overwrite = true;
-   convertNumToText();
+		break;
 
-   break;
+		case 'TAN':
 
-}      
+		no1 = Math.tan(parseFloat(no1));
+
+		w.value = no1;
+		overwrite = true;
+		convertNumToText();
+
+		break;
+
+	}      
 }
+    /* 
+      converts the integer to text
+      */
+      function convertNumToText(){
+      	conversion();
+      }
 
-function convertNumToText(){
-    conversion();
-}
+      function conversion(){
+      	if(document.getElementById("input_field").value==""){
+      		window.alert("Number Missing!");
+      	}
+      	else{
+      		var num=parseInt(document.getElementById("input_field").value);
+      		var result="";
+      		if(num>=1000 && num<=9999){
+      			result = ones(parseInt(num/1000)) + " Thousand ";
+      			num=num-parseInt(num/1000)*1000;
+      		}
+      		if(num>=100 && num<1000){
+      			result += ones(parseInt(num/100)*100) + " Hundred";
+      			num=num-parseInt(num/100)*100; 
+      		}
+      		if (num>=20 && num<100){
+      			result += TY(parseInt(num/10)*10);
+      			num=num - parseInt(num/10)*10;
+      		}
+      		if(num<20){
+      			result += ones(num)
+      		}
 
-function conversion(){
-    if(document.getElementById("input_field").value==""){
-        window.alert("Number Missing!");
-    }
-    else{
-        var num=parseInt(document.getElementById("input_field").value);
-        var result="";
-        if(num>=1000 && num<=9999){
-            result = ones(parseInt(num/1000)) + " Thousand ";
-            num=num-parseInt(num/1000)*1000;
-        }
-        if(num>=100 && num<1000){
-            result += ones(parseInt(num/100)*100) + " Hundred";
-            num=num-parseInt(num/100)*100; 
-        }
-        if (num>=20 && num<100){
-            result += TY(parseInt(num/10)*10);
-            num=num - parseInt(num/10)*10;
-        }
-        if(num<20){
-            result += ones(num)
-        }
-        // if(num%1!=0){
-        //     result+=ones(num)+"."+ones(num);
-        //     console.log(result);
-        // }
+      		window.document.getElementById("input_field-text_form").value=result;
+      		overwrite = true;
+      	}
+      }
 
-        window.document.getElementById("input_field-text_form").value=result;
-        overwrite = true;
-    }
-}
-
-function ones(num){
-    var num_str="";
-    switch(num){
-        case 0:
-        num_str = "Zero";
-        break;
-        case 1:
-        num_str = "One";
-        break;
-        case 2:
-        num_str = "Two";
-        break;
-        case 3:
-        num_str = "Three";
-        break;
-        case 4:
-        num_str = "Four";
-        break;
-        case 5:
-        num_str = "Five";
-        break;
-        case 6:
-        num_str = "Six";
-        break;
-        case 7:
-        num_str = "Seven";
-        break;
-        case 8:
-        num_str = "Eight";
-        break;
-        case 9:
-        num_str = "Nine";
-        break;
-        case 10:
-        num_str = "Ten";
-        break;
-        case 11:
-        num_str = "Eleven";
-        break;
-        case 12:
-        num_str = "Twelve";
-        break;
-        case 13:
-        num_str = "Thirteen";
-        break;
-        case 14:
-        num_str = "Fourteen";
-        break;
-        case 15:
-        num_str = "Fifthteen";
-        break;
-        case 16:
-        num_str = "Sixteen";
-        break;
-        case 17:
-        num_str = "Seventeen";
-        break;
-        case 18:
-        num_str = "Eighteen";
-        break;
-        case 19:
-        num_str = "Nineteen";
-        break;
-    }
-    return  num_str;
-}
+      function ones(num){
+      	var num_str="";
+      	switch(num){
+      		case 0:
+      		num_str = "Zero";
+      		break;
+      		case 1:
+      		num_str = "One";
+      		break;
+      		case 2:
+      		num_str = "Two";
+      		break;
+      		case 3:
+      		num_str = "Three";
+      		break;
+      		case 4:
+      		num_str = "Four";
+      		break;
+      		case 5:
+      		num_str = "Five";
+      		break;
+      		case 6:
+      		num_str = "Six";
+      		break;
+      		case 7:
+      		num_str = "Seven";
+      		break;
+      		case 8:
+      		num_str = "Eight";
+      		break;
+      		case 9:
+      		num_str = "Nine";
+      		break;
+      		case 10:
+      		num_str = "Ten";
+      		break;
+      		case 11:
+      		num_str = "Eleven";
+      		break;
+      		case 12:
+      		num_str = "Twelve";
+      		break;
+      		case 13:
+      		num_str = "Thirteen";
+      		break;
+      		case 14:
+      		num_str = "Fourteen";
+      		break;
+      		case 15:
+      		num_str = "Fifthteen";
+      		break;
+      		case 16:
+      		num_str = "Sixteen";
+      		break;
+      		case 17:
+      		num_str = "Seventeen";
+      		break;
+      		case 18:
+      		num_str = "Eighteen";
+      		break;
+      		case 19:
+      		num_str = "Nineteen";
+      		break;
+      	}
+      	return  num_str;
+      }
 
 
-function TY(num){
-    var num_str="";
-    switch(num){
-        case 20:
-        num_str = "Twenty";
-        break;
-        case 30:
-        num_str = "Thirty";
-        break;
-        case 40:
-        num_str = "Fourty";
-        break;
-        case 50:
-        num_str = "Fifthy";
-        break;
-        case 60:
-        num_str = "Sixty";
-        break;
-        case 70:
-        num_str = "Seventy";
-        break;
-        case 80:
-        num_str = "Eighty";
-        break;
-        case 90:
-        num_str = "Ninety";
-        break;
-    }
-    return num_str;
-} 
+      function TY(num){
+      	var num_str="";
+      	switch(num){
+      		case 20:
+      		num_str = "Twenty";
+      		break;
+      		case 30:
+      		num_str = "Thirty";
+      		break;
+      		case 40:
+      		num_str = "Fourty";
+      		break;
+      		case 50:
+      		num_str = "Fifthy";
+      		break;
+      		case 60:
+      		num_str = "Sixty";
+      		break;
+      		case 70:
+      		num_str = "Seventy";
+      		break;
+      		case 80:
+      		num_str = "Eighty";
+      		break;
+      		case 90:
+      		num_str = "Ninety";
+      		break;
+      	}
+      	return num_str;
+      } 
+    	/* 
+      	displays and hides the scientific buttons
+      */
+      function showSciBtns(){
+      	document.getElementById("sci-btns").style.visibility="visible";
+      }
 
-function showSciBtns(){
-    document.getElementById("sci-btns").style.visibility="visible";
-}
-
-function hideSciBtns(){
-    document.getElementById("sci-btns").style.visibility="hidden";
-}                       
-
-
-
-
-
-</script>
+      function hideSciBtns(){
+      	document.getElementById("sci-btns").style.visibility="hidden";
+      }                       
 
 
-</html>
+    </script>
+
+
+    </html>
+
