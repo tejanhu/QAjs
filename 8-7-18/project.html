@@ -14,10 +14,10 @@
     }
 
     #input_field{
-       width: 335px;
-       height: 50px;
-   }
-   #input_field-text_form{
+     width: 335px;
+     height: 50px;
+ }
+ #input_field-text_form{
     margin-top:10;                       
     width: 335px;
     height: 50px;
@@ -115,42 +115,42 @@ function add(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-       no1 = parseFloat(w.value);
+     no1 = parseFloat(w.value);
 
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+ }
+ else{
+     no1 = parseInt(w.value);
+ } 
 
-   operator = "add";
-   overwrite = true;
+ operator = "add";
+ overwrite = true;
 
 }  
 function minus(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-       no1 = parseFloat(w.value);
+     no1 = parseFloat(w.value);
 
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+ }
+ else{
+     no1 = parseInt(w.value);
+ } 
 
-   operator = "minus";
-   overwrite = true;
+ operator = "minus";
+ overwrite = true;
 
 }  
 function multiply(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-       no1 = parseFloat(w.value);
+     no1 = parseFloat(w.value);
 
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+ }
+ else{
+     no1 = parseInt(w.value);
+ } 
 
   // no1 = parseInt(w.value);
   operator = "multiply";
@@ -161,12 +161,12 @@ function divide(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-       no1 = parseFloat(w.value);
+     no1 = parseFloat(w.value);
 
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+ }
+ else{
+     no1 = parseInt(w.value);
+ } 
 
   // no1 = parseInt(w.value);
   operator = "divide";
@@ -216,18 +216,19 @@ function setClear(){
 }  
 
 function operations(){
- no1 = no1.toString();
- no2 = w.value.toString();
- console.log(no1);
- console.log(no2);
- switch(operator)
- {
-     case'add':
-     if(no1.includes(".") && no2.includes(".")){
-         no2 = parseFloat(w.value);
-         res = (parseFloat(no1)+no2);
-     }
-     else{
+   no1 = no1.toString();
+   no2 = w.value.toString();
+   console.log(no1);
+   console.log(no2);
+   switch(operator)
+   {
+       case'add':
+       if(no1.includes(".") && no2.includes(".")){
+           no2 = parseFloat(w.value);
+           res = (parseFloat(no1)+no2);
+       }
+       else{
+        no1 = parseInt(w.value);
         no2 = parseInt(w.value);
         res = parseInt(no1+no2);
     }  
@@ -240,92 +241,88 @@ function operations(){
     case 'minus':
 
     if(no1.includes(".") && no2.includes(".")){
-     no1 = parseFloat(w.value);
-     no2 = parseFloat(w.value);
-     res = (parseFloat(no1)-no2);
- }
- else{
-     no1 = parseInt(w.value);
-     no2 = parseInt(w.value);
-     res = parseInt(no1-no2);
- }  
- w.value = res;
- overwrite = true;
- convertNumToText();
+       no1 = parseFloat(w.value);
+       no2 = parseFloat(w.value);
+       res = (parseFloat(no1)-no2);
+   }
+   else{
+       no1 = parseInt(w.value);
+       no2 = parseInt(w.value);
+       res = parseInt(no1-no2);
+   }  
+   w.value = res;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
- case 'multiply':
+   case 'multiply':
 
- if(no1.includes(".") && no2.includes(".")){
-     no1 = parseFloat(w.value);
-     no2 = parseFloat(w.value);
-     res = (parseFloat(no1)*no2);
- }
- else{
-     no1 = parseInt(w.value);
-     no2 = parseInt(w.value);
-     res = parseInt(no1*no2);
- }  
- w.value = res;
- overwrite = true;
- convertNumToText();
+   if(no1.includes(".") && no2.includes(".")){
+       no1 = parseFloat(w.value);
+       no2 = parseFloat(w.value);
+       res = (parseFloat(no1)*no2);
+   }
+   else{
+       no1 = parseInt(w.value);
+       no2 = parseInt(w.value);
+       res = parseInt(no1*no2);
+   }  
+   w.value = res;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
- case 'divide':
+   case 'divide':
 
- if(no1.includes(".") && no2.includes(".")){
-     no1 = parseFloat(w.value);
-     no2 = parseFloat(w.value);
-     res = (parseFloat(no1)/no2);
- }
- else{
-     no1 = parseInt(w.value);
-     no2 = parseInt(w.value);
-     res = parseInt(no1/no2);
- }  
- w.value = res;
- overwrite = true;
- convertNumToText();
+   if(no1.includes(".") && no2.includes(".")){
+       no1 = parseFloat(w.value);
+       no2 = parseFloat(w.value);
+       res = (parseFloat(no1)/no2);
+   }
+   else{
+       no1 = parseInt(w.value);
+       no2 = parseInt(w.value);
+       res = parseInt(no1/no2);
+   }  
+   w.value = res;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
- case 'COSINE':
-   // console.log(document.getElementById("input_field")+20.00);
-   
+   case 'COSINE':
+
    no1 = Math.cos(parseFloat(no1));
 
- // if(no2.includes(".")){
- //     no2 = Math.cos(parseFloat(w.value));
- // }
- 
- w.value = no1;
- overwrite = true;
- convertNumToText();
+   
+   w.value = no1;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
- case 'SINE':
+   case 'SINE':
 
- 
- no1 = Math.sin(parseFloat(no1));
- 
- w.value = no1;
- overwrite = true;
- convertNumToText();
+   
+   no1 = Math.sin(parseFloat(no1));
+   
+   w.value = no1;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
- case 'TAN':
+   case 'TAN':
 
- no1 = Math.tan(parseFloat(no1));
+   no1 = Math.tan(parseFloat(no1));
 
- w.value = no1;
- overwrite = true;
- convertNumToText();
+   w.value = no1;
+   overwrite = true;
+   convertNumToText();
 
- break;
+   break;
 
 }      
 }
@@ -356,10 +353,10 @@ function conversion(){
         if(num<20){
             result += ones(num)
         }
-        if(num%1!=0){
-            result+=ones(num)+"."+ones(num);
-            console.log(result);
-        }
+        // if(num%1!=0){
+        //     result+=ones(num)+"."+ones(num);
+        //     console.log(result);
+        // }
 
         window.document.getElementById("input_field-text_form").value=result;
         overwrite = true;
