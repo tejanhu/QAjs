@@ -14,10 +14,10 @@
     }
 
     #input_field{
-     width: 335px;
-     height: 50px;
- }
- #input_field-text_form{
+       width: 335px;
+       height: 50px;
+   }
+   #input_field-text_form{
     margin-top:10;                       
     width: 335px;
     height: 50px;
@@ -80,9 +80,9 @@
                 </tr>
 
                 <tr id="sci-btns">
-                    <td><input class="btn" id="bSin" type="button" value="SIN" onclick=""></td>
-                    <td><input class="btn" id="bCos" type="button" value="COS" onclick=""></td>
-                    <td><input class="btn" id="bTan" type="button" value="TAN" onclick=""></td>
+                    <td><input class="btn" id="bSin" type="button" value="SIN" onclick="sin()"></td>
+                    <td><input class="btn" id="bCos" type="button" value="COS" onclick="cosine()"></td>
+                    <td><input class="btn" id="bTan" type="button" value="TAN" onclick="tan()"></td>
                 </tr>
             </table>
 
@@ -115,42 +115,42 @@ function add(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+       no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
 
- operator = "add";
- overwrite = true;
+   operator = "add";
+   overwrite = true;
 
 }  
 function minus(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+       no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
 
- operator = "minus";
- overwrite = true;
+   operator = "minus";
+   overwrite = true;
 
 }  
 function multiply(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+       no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
 
   // no1 = parseInt(w.value);
   operator = "multiply";
@@ -161,36 +161,85 @@ function divide(){
     w = window.document.F.input_data;
     no1 = w.value;
     if(no1.includes(".")){
-     no1 = parseFloat(w.value);
+       no1 = parseFloat(w.value);
 
- }
- else{
-     no1 = parseInt(w.value);
- } 
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
 
   // no1 = parseInt(w.value);
   operator = "divide";
   overwrite = true;
 
 }
+function cosine(){
+    w = window.document.F.input_data;
+    no1 = w.value;
+    if(no1.includes(".")){
+       no1 = parseFloat(w.value);
+
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
+
+  // no1 = parseInt(w.value);
+  operator = "COSINE";
+  overwrite = true;
+
+}
+function sine(){
+    w = window.document.F.input_data;
+    no1 = w.value;
+    if(no1.includes(".")){
+       no1 = parseFloat(w.value);
+
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
+
+  // no1 = parseInt(w.value);
+  operator = "SINE";
+  overwrite = true;
+
+}
+function tan(){
+    w = window.document.F.input_data;
+    no1 = w.value;
+    if(no1.includes(".")){
+       no1 = parseFloat(w.value);
+
+   }
+   else{
+       no1 = parseInt(w.value);
+   } 
+
+  // no1 = parseInt(w.value);
+  operator = "TAN";
+  overwrite = true;
+
+}
 function setClear(){
   w.value = "";
+  document.getElementById("input_field-text_form").value="";
   overwrite = true;
 }  
 
 function operations(){
-   no1 = no1.toString();
-   no2 = w.value.toString();
-   console.log(no1);
-   console.log(no2);
-   switch(operator)
-   {
-       case'add':
-       if(no1.includes(".") && no2.includes(".")){
-           no2 = parseFloat(w.value);
-           res = (parseFloat(no1)+no2).toFixed(1);
-       }
-       else{
+ no1 = no1.toString();
+ no2 = w.value.toString();
+ console.log(no1);
+ console.log(no2);
+ switch(operator)
+ {
+     case'add':
+     if(no1.includes(".") && no2.includes(".")){
+         no2 = parseFloat(w.value);
+         res = (parseFloat(no1)+no2).toFixed(1);
+     }
+     else{
         no2 = parseInt(w.value);
         res = parseInt(no1+no2);
     }  
@@ -203,56 +252,104 @@ function operations(){
     case 'minus':
 
     if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)-no2).toFixed(1);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1-no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+     no1 = parseFloat(w.value);
+     no2 = parseFloat(w.value);
+     res = (parseFloat(no1)-no2).toFixed(1);
+ }
+ else{
+     no1 = parseInt(w.value);
+     no2 = parseInt(w.value);
+     res = parseInt(no1-no2);
+ }  
+ w.value = res;
+ overwrite = true;
+ convertNumToText();
 
-   break;
+ break;
 
-   case 'multiply':
+ case 'multiply':
 
-   if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)*no2).toFixed(1);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1*no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+ if(no1.includes(".") && no2.includes(".")){
+     no1 = parseFloat(w.value);
+     no2 = parseFloat(w.value);
+     res = (parseFloat(no1)*no2).toFixed(1);
+ }
+ else{
+     no1 = parseInt(w.value);
+     no2 = parseInt(w.value);
+     res = parseInt(no1*no2);
+ }  
+ w.value = res;
+ overwrite = true;
+ convertNumToText();
 
-   break;
+ break;
 
-   case 'divide':
+ case 'divide':
 
-   if(no1.includes(".") && no2.includes(".")){
-       no1 = parseFloat(w.value);
-       no2 = parseFloat(w.value);
-       res = (parseFloat(no1)/no2).toFixed(1);
-   }
-   else{
-       no1 = parseInt(w.value);
-       no2 = parseInt(w.value);
-       res = parseInt(no1/no2);
-   }  
-   w.value = res;
-   overwrite = true;
-   convertNumToText();
+ if(no1.includes(".") && no2.includes(".")){
+     no1 = parseFloat(w.value);
+     no2 = parseFloat(w.value);
+     res = (parseFloat(no1)/no2).toFixed(1);
+ }
+ else{
+     no1 = parseInt(w.value);
+     no2 = parseInt(w.value);
+     res = parseInt(no1/no2);
+ }  
+ w.value = res;
+ overwrite = true;
+ convertNumToText();
 
-   break;
+ break;
+
+ case 'COSINE':
+
+ if(res.includes(".")){
+   res = Math.cos(parseFloat(w.value)).toFixed(1);
+}
+else{
+   res = Math.cos(parseInt(no1/no2)).toFixed(1);
+}  
+w.value = res;
+overwrite = true;
+convertNumToText();
+
+break;
+
+case 'SINE':
+
+if(res.includes(".")){
+   res = Math.sin(parseFloat(w.value)).toFixed(1);
+}
+else{
+   res = Math.sin(parseInt(no1/no2)).toFixed(1);
+}  
+w.value = res;
+overwrite = true;
+convertNumToText();
+
+break;
+
+case 'TAN':
+
+if(res.includes(".")){
+   res = Math.tan(parseFloat(w.value)).toFixed(1);
+}
+else{
+   res = Math.tan(parseInt(no1/no2)).toFixed(1);
+}  
+w.value = res;
+overwrite = true;
+convertNumToText();
+
+break;
+
+
+
+
+
+
 
 }      
 }
