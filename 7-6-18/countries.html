@@ -1,0 +1,250 @@
+<html>
+
+    <head>
+        <style>
+              
+        </style>
+    </head>
+
+    <body onload="hideMainInfo()">
+
+        <div id="countries" onmouseenter="showCountry()" onmouseleave="showCountryAndSports()">
+            <div style="border-style:solid;border-width:1px;">
+                COUNTRIES
+            </div>
+
+            <div style="border-style:solid;border-width:2px;border-color:red;">
+                  <span>
+                    <div style="border-style:solid;border-width:1px;border-color:red;"><span id="ENG" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showEngInfo()">UK</span></div>
+                    <div style="border-style:solid;border-width:1px;border-color:red;"><span id="US" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showUsaInfo()">USA</span></div>
+                    <div style="border-style:solid;border-width:1px;border-color:red;"><span id="ESP" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showEspInfo()">SPAIN</span></div>
+                </span>
+            </div>
+        </div>
+
+      
+        <div id="sports" onmouseenter="showSports()" onmouseleave="showCountryAndSports()">
+            <div style="border-style:solid;border-width:1px;">
+                SPORTS
+            </div>
+            <div style="border-style:solid;border-width:2px;border-color:red;">
+                    <span>
+                        <div style="border-style:solid;border-width:1px;border-color:red;"><span id="cricky" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showCrickyInfo()">CRICKET</span></div>
+                        <div style="border-style:solid;border-width:1px;border-color:red;"><span id="footy" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showFootyInfo()">FOOTBALL</span></div>
+                        <div style="border-style:solid;border-width:1px;border-color:red;"><span id="abc" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showAbcInfo()">ABC</span></div>
+                        <div style="border-style:solid;border-width:1px;border-color:red;"><span id="xyz" onmouseenter="turnBlue(this)" onmouseleave="turnWhite(this)" onclick="showXyzInfo()">XYZ</span></div>
+                    </span>
+                </div>
+            </div>
+
+            <div id="wiki-info" style="text-align:center;">
+                    <div style="border-style:solid;border-width:4px;" id="ENG-INFO">
+                    <div>
+                        <img style="float:right;" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1280px-Flag_of_England.svg.png" width="40px" height="50px" alt="ENGLAND FLAG">
+                        <p>
+                            England is a country that is part of the United Kingdom.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="border-style:solid;border-width:4px;" id="US-INFO">
+                    <div>
+                        <img style="float:right;" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png" width="40px" height="50px" alt="USA FLAG">
+                        <p>
+                            The United States of America (USA), commonly known as the United States (U.S.) or America, is a federal republic composed of 50 states, a federal district, five major self-governing territories, and various possessions.
+                        </p>
+                    </div>
+                </div>
+    
+
+                <div style="border-style:solid;border-width:4px;" id="ESP-INFO">
+                    <div>
+                        <img style="float:right;" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png" width="40px" height="50px" alt="SPAIN FLAG">
+                        <p>
+                            Spain (Spanish: España [esˈpaɲa] (About this sound listen)), officially the Kingdom of Spain (Spanish: Reino de España), is a sovereign state mostly located on the Iberian Peninsula in Europe.
+                        </p>
+                    </div>
+                </div>
+    
+
+                <div style="border-style:solid;border-width:4px;" id="CRICKY-INFO">
+                    <div>
+                        <img style="float:right;" src="https://cdn.shopify.com/s/files/1/0756/1735/products/Polysoft_Ball.png?v=1487846595" width="40px" height="50px" alt="CRICKET BALL">
+                        <p>
+                                Cricket is a bat-and-ball game played between two teams of eleven players each on a cricket field, at the centre of which is a rectangular 20-metre (22-yard) pitch with a target at each end called the wicket (a set of three wooden stumps upon which two bails sit).
+                        </p>
+                    </div>
+                </div>
+    
+
+                <div style="border-style:solid;border-width:4px;" id="FOOTY-INFO">
+                    <div>
+                        <img style="float:right;" src="https://shop.savethechildren.org.uk/wp-content/uploads/2016/10/football-1.png" width="40px" height="50px" alt="FOOTBALL">
+                        <p>
+                            Football is a family of team sports that involve, to varying degrees, kicking a ball with a foot to score a goal.
+                        </p>
+                    </div>
+                </div>
+    
+
+                <div style="border-style:solid;border-width:4px;" id="ABC-INFO">
+                    <div>
+                        <img style="float:right;" src="https://i.ytimg.com/vi/lGkczKwP6QA/maxresdefault.jpg" width="40px" height="50px" alt="ABC LETTERS">
+                        <p>
+                            ABC are the first three letters of the Latin script known as the alphabet.
+                        </p>
+                    </div>
+                </div>
+    
+                <div style="border-style:solid;border-width:4px;" id="XYZ-INFO">
+                    <div>
+                        <img style="float:right;"src="https://media.wired.com/photos/59548f4438978176dacc632f/master/w_3506,c_limit/GettyImages-175518882-story_adjusted.jpg" width="40px" height="50px" alt="XYZ LETTERS">
+                        <p>
+                            XYZ are the last three letters in the Latin script.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+               
+         
+         
+        <script>
+             
+                var countryList; 
+                var sportsList;
+                var engName, usaName, espName, cricketName, footyName,abcName,xyzName,wikiCont; 
+
+                countryList = document.getElementById("countries");     
+                sportsList = document.getElementById("sports");  
+
+                engName = document.getElementById("ENG");     
+                usaName = document.getElementById("USA");
+                espName = document.getElementById("ESP");
+
+                cricketName = document.getElementById("cricky");
+                footyName = document.getElementById("footy");
+                abcName = document.getElementById("abc");
+                xyzName = document.getElementById("xyz");
+
+                engInfo = document.getElementById("ENG-INFO");     
+                usaInfo = document.getElementById("US-INFO");
+                espInfo = document.getElementById("ESP-INFO");
+
+                cricketInfo = document.getElementById("CRICKY-INFO");
+                footyInfo = document.getElementById("FOOTY-INFO");
+                abcInfo = document.getElementById("ABC-INFO");
+                xyzInfo = document.getElementById("XYZ-INFO");
+                wikiCont = document.getElementById("wiki-info");
+
+
+            function showCountry(){       
+                countryList.style.visibility="visible";
+                sportsList.style.visibility="hidden";
+            }
+
+            function showSports(){
+                countryList.style.visibility="hidden";
+                sportsList.style.visibility="visible";
+
+            }
+
+            function showCountryAndSports(){
+                     countryList.style.visibility="visible";
+                     sportsList.style.visibility="visible";
+            }
+
+            function turnBlue(obj){
+                obj.style.background="blue";
+            }
+            function turnWhite(obj){
+                obj.style.background="white";
+            }
+            function hideMainInfo(){
+                wikiCont.style.visibility="hidden";
+            }
+
+            function showEngInfo(){
+
+                engInfo.style.visibility="visible";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="hidden";
+                
+                
+            }
+            
+            function showUsaInfo(){
+                
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="visible";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="hidden";
+            }
+
+            function showEspInfo(){
+                
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="visible";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="hidden";
+            }
+
+            function showCrickyInfo(){
+                
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="visible";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="hidden";
+            }
+
+            function showFootyInfo(){
+                
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="visible";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="hidden";
+            }
+
+            function showAbcInfo(){
+                
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="visible";
+                xyzInfo.style.visibility="hidden";
+            }
+
+            function showXyzInfo(){
+                         
+                engInfo.style.visibility="hidden";
+                usaInfo.style.visibility="hidden";
+                espInfo.style.visibility="hidden";
+                cricketInfo.style.visibility="hidden";
+                footyInfo.style.visibility="hidden";
+                abcInfo.style.visibility="hidden";
+                xyzInfo.style.visibility="visible";
+            }
+
+
+        </script>
+    </body>
+  
+</html>

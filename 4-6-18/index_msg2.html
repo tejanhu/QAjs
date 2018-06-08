@@ -1,0 +1,33 @@
+<html>
+
+<body>
+  <form name="F">
+   <input name="A">
+   <input name="B">
+   <input name="c" value="">
+   <input type="button" value="click me" onclick="MSG()">
+</form>
+
+<script>
+
+    var no1,no2,res;
+            // add to numbers,and display the result into text box upon clicking the button
+            function MSG(){
+              no1 = window.document.F.A.value;
+              no2 = window.document.F.B.value;             
+                if(no1.includes(".") && no2.includes(".")){
+                   no1 = parseFloat(window.document.F.A.value);
+                   no2 = parseFloat(window.document.F.B.value);
+                   res = no1+no2;
+               }
+               else{
+                   no1 = parseFloat(window.document.F.A.value);
+                   no2 = parseFloat(window.document.F.B.value);
+                   res = no1+no2;
+               }    
+               window.document.F.c.value=res;
+           }
+       </script>
+   </body>
+
+   </html>

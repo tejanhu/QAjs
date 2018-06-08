@@ -1,0 +1,31 @@
+<html>
+
+    <body>
+          <form name="F">
+             <input name="num" value="0"><br>
+             <input type="button" value="+" onmouseenter="increment()">
+             <input type="button" value="-" onmouseleave="decrement()">
+             
+             
+        </form>
+
+        <script>
+        
+           
+
+          function increment(){
+             var a = parseInt(window.document.F.num.value);
+              a++;
+              window.document.F.num.value = a;
+          }
+                           
+        function decrement(num){
+                var a = parseInt(window.document.F.num.value);
+                  a--;
+                  window.document.F.num.value = a;
+        }
+
+        </script>
+    </body>
+  
+</html>

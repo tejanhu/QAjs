@@ -1,0 +1,153 @@
+<html>
+
+<head>
+
+<style>
+
+    #input_field{
+         width: 335px;
+         height: 50px;
+    }
+    .btn{
+        background-color:	#FFFACD;
+        width: 80px;
+        height: 70px;
+    }
+</style>
+
+</head>
+
+        <form name="F">
+
+            <table name="MrT">
+                <tr ><input type="text" id="input_field" name="input_data"></tr>
+                <tr>
+                    <td><input class="btn" id="b0" type="button" value="0" onclick="updateScreen(0)"></td>
+                    <td><input class="btn" id="b1" type="button" value="1" onclick="updateScreen(1)"></td>
+                    <td><input class="btn" id="b2" type="button" value="2" onclick="updateScreen(2)"></td>
+                    <td><input class="btn" type="button" value="+" onclick="add()"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" id="b3" type="button" value="3" onclick="updateScreen(3)"></td>
+                    <td><input class="btn" id="b4" type="button" value="4" onclick="updateScreen(4)"></td>
+                    <td><input class="btn" id="b5" type="button" value="5" onclick="updateScreen(5)"></td>
+                    <td><input class="btn" type="button" value="-" onclick="minus()"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" id="b6" type="button" value="6" onclick="updateScreen(6)"></td>
+                    <td><input class="btn" id="b7" type="button" value="7" onclick="updateScreen(7)"></td>
+                    <td><input class="btn" id="b8" type="button" value="8" onclick="updateScreen(8)"></td>
+                    <td><input class="btn" type="button" value="/" onclick="divide()"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" id="b9" type="button" value="9" onclick="updateScreen(9)"></td>
+                    <td><input class="btn" type="button" value="=" onclick="operations()"></td>
+                    <td><input class="btn" type="button" value="C" onclick="setClear()"></td>
+                    <td><input class="btn" type="button" value="*" onclick="multiply()"></td>
+                </tr>
+        </table>
+
+
+        </form>
+       
+
+        <script>
+         var no1,no2,res,w;
+         var overwrite = true;
+         var operator;
+
+         function updateScreen(num){
+            w = window.document.F.input_data;
+            
+            if(overwrite){
+                w.value = num;
+                overwrite = false;
+            }
+            else{
+                w.value = (w.value * 10) + num;
+            }
+         }
+         
+         function add(){
+           
+              no1 = parseInt(w.value);
+              operator = "add";
+              overwrite = true;
+              
+         }  
+         function minus(){
+           
+              no1 = parseInt(w.value);
+              operator = "minus";
+                 overwrite = true;
+              
+         }  
+         function multiply(){
+              
+              no1 = parseInt(w.value);
+              operator = "multiply";
+                 overwrite = true;
+              
+         }
+         function divide(){
+               
+              no1 = parseInt(w.value);
+              operator = "divide";
+                 overwrite = true;
+              
+         }
+        function setClear(){
+              w.value = "";
+              overwrite = true;
+         }  
+    
+         function operations(){
+             no2 = parseInt(w.value);
+             switch(operator)
+           {
+               case'add':
+            
+                    res = no1 + no2;
+                    w.value = res;
+                    overwrite = true;
+                
+                break;
+
+                case 'minus':
+                
+                    res = no1 - no2;
+                    w.value = res;
+                    overwrite = true;
+
+                
+                 break;
+
+                 case 'multiply':
+                
+                    res = no1 * no2;
+                    w.value = res;
+                    overwrite = true;
+
+                
+                break;
+
+                case 'divide':
+               
+                    res = no1 / no2;
+                    w.value = res;
+                    overwrite = true;
+
+                
+                break;
+
+           }      
+         }                       
+                    
+            
+
+             
+
+        </script>
+
+
+</html>

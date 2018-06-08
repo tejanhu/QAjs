@@ -1,0 +1,34 @@
+<html>
+
+    <body>
+          <form name="F">
+             <label>FIRST NO:</label><input name="A"><br>
+             <label>SECOND NO:</label><input name="B"><br>
+             <input type="button" value="click me" onclick="MSG()"><br>
+             <label>Result:</label><input name="c" value="">
+        </form>
+
+        <script>
+            function MSG(){
+                var no1,no2;                 
+                var res;
+                if(window.document.F.A.value==""){
+                    window.alert("First Number is missing!");
+                     window.document.F.A.focus();
+                }
+                else if(window.document.F.B.value==""){
+                    window.alert("Second Number is missing!");
+                     window.document.F.B.focus();
+                }
+                else{
+                     no1 = parseInt(window.document.F.A.value);
+                     no2 = parseInt(window.document.F.B.value);
+                     res = no1+no2;
+                     window.document.F.c.value=res;
+                }
+                
+            }
+        </script>
+    </body>
+  
+</html>

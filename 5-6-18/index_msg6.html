@@ -1,0 +1,134 @@
+<html>
+
+    <body>
+          <form name="F">
+             <input name="paid_amount"><br>
+             <input type="button" value="Change" onclick="main()"><br><br>
+             <input value="" name="theChange"><br>
+             
+        </form>
+
+        <script>
+         
+
+
+            function main(){
+                if(window.document.F.paid_amount.value==""){
+                    window.alert("Number Missing!");
+                }
+                else{
+                        var num=(window.document.F.paid_amount.value);
+                        window.document.F.theChange.value=toString(num);    
+                        }
+                    }
+                           
+                function toString(num){
+                    var paid_amount_str="";
+                            switch(num){
+                                case 1:
+                                paid_amount_str = "One";
+                                break;
+                                case 2:
+                                paid_amount_str = "Two";
+                                break;
+                                case 3:
+                                paid_amount_str = "Three";
+                                break;
+                                case 4:
+                                paid_amount_str = "Four";
+                                break;
+                                case 5:
+                                paid_amount_str = "Five";
+                                break;
+                                case 6:
+                                paid_amount_str = "Six";
+                                break;
+                                case 7:
+                                paid_amount_str = "Seven";
+                                break;
+                                case 8:
+                                paid_amount_str = "Eight";
+                                break;
+                                case 9:
+                                paid_amount_str = "Nine";
+                                break;
+                                case 10:
+                                paid_amount_str = "Ten";
+                                break;
+                                case 11:
+                                paid_amount_str = "Eleven";
+                                break;
+                                case 12:
+                                paid_amount_str = "Twelve";
+                                break;
+                                case 13:
+                                paid_amount_str = "Thirteen";
+                                break;
+                                case 14:
+                                paid_amount_str = "Fourteen";
+                                break;
+                                case 15:
+                                paid_amount_str = "Fifthteen";
+                                break;
+                                case 16:
+                                paid_amount_str = "Sixteen";
+                                break;
+                                case 17:
+                                paid_amount_str = "Seventeen";
+                                break;
+                                case 18:
+                                paid_amount_str = "Eighteen";
+                                break;
+                                case 19:
+                                paid_amount_str = "Nineteen";
+                                break;
+                                case 20:
+                                paid_amount_str = "Twenty";
+                                break;
+                                case 30:
+                                paid_amount_str = "Thirty";
+                                break;
+                                case 40:
+                                paid_amount_str = "Fourty";
+                                break;
+                                case 50:
+                                paid_amount_str = "Fifthy";
+                                break;
+                                case 60:
+                                paid_amount_str = "Sixty";
+                                break;
+                                case 70:
+                                paid_amount_str = "Seventy";
+                                break;
+                                case 80:
+                                paid_amount_str = "Eighty";
+                                break;
+                                case 90:
+                                paid_amount_str = "Ninety";
+                                break;
+                                case 00:
+                                paid_amount_str = "Hundred";
+                                case 000:
+                                paid_amount_str = "Thousand";
+                                }
+
+                                console.log(num.substring(0));
+
+
+
+                                return paid_amount_str;
+                            }
+                                
+                                       
+                                
+                                
+                                 
+                            
+                        
+    
+        
+          
+        </script>
+    </body>
+  
+</html>

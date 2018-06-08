@@ -1,0 +1,37 @@
+<html>
+
+    <head>
+        <style>
+                	
+        
+                
+                
+        </style>
+    </head>
+
+    <body onmousemove="move()">
+          
+          <div style="text-align:center">
+              <input id="someInput"  type="text" onmouseenter="getit()">
+         </div>
+          <span id="A" style="position:absolute">   QA Consulting</span>  
+         
+        <script>
+        
+           
+            var s;
+          function move(){
+             s = window.document.getElementById("A");
+             s.style.top=window.event.clientY;
+             s.style.left=window.event.clientX;
+          }  
+          function getit(){
+             s = window.document.getElementById("A");
+             s.innerHTML=document.getElementById("someInput").value;
+             
+          }        
+
+        </script>
+    </body>
+  
+</html>

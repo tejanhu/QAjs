@@ -1,0 +1,131 @@
+<html>
+    <body onkeydown="actionperformed()" style="background:url(https://i.pinimg.com/originals/e6/35/58/e6355800400cf9fe2d14c87bcd66c046.jpg)">
+
+
+
+      
+
+        
+        
+       
+           
+       
+
+        <script>
+
+                var Left=1;
+                var Up=1;
+                var i=500;
+
+              function actionperformed(){
+                  if(event.keyCode==39){
+                      Left+=10;
+                  }
+                  if(event.keyCode==37){
+                      Left-=10;
+                  }
+                  if(event.keyCode==38){
+                      Up+=10;
+                  }
+                  if(event.keyCode==40){
+                      Up-=10;
+                  }
+                  if(event.keyCode==32){
+                      fire();
+                  }
+                  document.getElementById("span").style.left=Left;
+                  document.getElementById("span").style.top=Up;
+              }
+
+              function fire(){
+                document.getElementById("fire").style.left=Left+70;
+                document.getElementById("fire").style.visibility='visible';
+                window.setInterval(fire1,1000);
+              }
+
+              function fire1(){
+                  console.log("(|)");
+                  i+=10;
+                  document.getElementById("fire").style.top=i;
+              }
+
+        </script>
+        <span id="span" style="position:absolute;top:500">
+
+
+                <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                        oooooOOOOOOOOOOOOOOOOooooo
+                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                    IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+                zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+        .<><><><><><><><><><><><><><><><><><><><><><><><><><><><>.
+    /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
+    /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
+    \XXX[  ]XXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXX[  ]XXX/
+    \XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/
+        ~~~~\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/~~~~
+                /   ~~~<><><><><><><><><><>~~~   \
+                /      /       |   |          \      \
+                /     /               |          \     \
+                /    /           |                  \    \
+            /   /               |   |              \   \
+            /  /               |                      \  \
+            _/_/                     | |                  \_\_
+        <___>                 |    |                   <___>
+                                        |
+                                |                    
+            </pre>
+            </span>
+           
+
+            
+             <span id="fire" style="position:absolute;visibility:hidden">
+                
+                /_\
+                                
+            </span>
+    </body>
+</html>

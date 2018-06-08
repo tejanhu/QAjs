@@ -1,0 +1,48 @@
+<html>
+
+    <body>
+          <form name="form1">
+              <input type="text">
+              <input type="">
+              <input>
+              <input type="button" value="click" onclick="doSomething1()">
+        </form>
+
+          <form name="form2">
+              <input type="text">
+              <input type="">
+              <input>
+              <input type="text">
+              <input type="">
+              <input>
+              <input type="button" value="click" onclick="doSomething2()">
+        </form>
+
+        <script>
+             var total1 =0;
+             var total2 =0;
+            function doSomething1(){
+               
+                var forms = window.document.forms[0].elements[0];
+
+                if(forms.type=="text"){
+                    total1++;    
+                }
+
+                console.log(total1);
+            }
+
+             function doSomething2(){
+            
+                var forms = window.document.forms[1].elements[0];
+
+                 if(forms.type=="text"){
+                    total2++;
+                }
+
+                console.log(total2);
+            }
+        </script>
+    </body>
+  
+</html>

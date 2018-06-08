@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+                #everything{
+                   background:url("https://source.unsplash.com/category/nature/1920x1080") no-repeat center center fixed;
+                }
+                #someForm{
+                    text-align: center;
+                    padding-top: 350;
+                }
+                #userLbl{
+                    font-size: 48;
+                    color:rgb(0,20,500);
+                    font-weight: bold;
+                }
+                #emLbl{
+                    font-size: 48;
+                    color:rgb(0,20,500);
+                    font-weight: bold;
+                }
+                #passLbl{
+                    font-size: 48;
+                    color:rgb(0,20,500);
+                    font-weight: bold;
+                }
+                #loginBtn{
+                    font-size: 48;
+                }
+        </style>
+    </head>
+
+    <body id="everything">
+            <form id="someForm" action="check.html" onsubmit="return checkCredentials()">
+                    <label id="userLbl">Username:</label><br><input type="text" name="uname" id="U" size="48"><br>
+                    <label id="emLbl">Email Address:</label><br><input name="emailname" id="email" size="48"><br>
+                    <label id="passLbl">Password:</label><br><input type="password" name="password" id="P" size="48"><br><br>
+                    <input id="loginBtn" type="submit" value="Login">
+            </form>
+     
+
+        <script>
+           
+            // var emailFormat = new RegExp("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/");
+            function checkCredentials(){
+                if(document.getElementById("U").value==""){
+                    window.alert("Username Missing!");
+                    window.document.getElementById("U").focus();
+                    return false;
+                }
+                 else if(document.getElementById("P").value==""){
+                    window.alert("Password Missing!");
+                    window.document.getElementById("P").focus();
+                    return false;
+                }
+                else if(!(document.getElementById("email").value.includes("@")&&(document.getElementById("email").value.includes(".")))){
+                    window.alert("Invalid Email Address!");
+                    window.document.getElementById("email").focus();
+                    return false;
+                }
+                else{
+                    return true;
+                }
+              }
+        </script>
+    </body>
+</html>

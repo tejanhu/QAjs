@@ -1,0 +1,65 @@
+<html>
+
+    <body>
+          <form name="F">
+             <label>Bill:</label><input name="bill"><br>
+             <label>Paid Amount:</label><input name="paid_amount"><br>
+             <input type="button" value="Calculate" onclick="calculateBill()"><br><br>
+              <label>50 Pounds</label><input value="0" name="t50"><br>
+             <label>20 Pounds</label><input value="0" name="t20"><br>
+             <label>10 Pounds</label><input value="0" name="t10"><br>
+             <label>5 Pounds</label><input value="0" name="t5"><br>
+             <label>2 Pounds</label><input value="0" name="t2"><br>
+             <label>1 Pounds</label><input value="0" name="t1"><br> 
+        </form>
+
+        <script>
+            var change;
+            var fifties,twenties,tens,fives,twos,ones;
+            var breakdown;
+           function calculateBill(){
+                var bill= parseInt(window.document.F.bill.value);
+                var paid_amount= parseInt(window.document.F.paid_amount.value);;
+                change = paid_amount - bill;
+
+                if(change>50){
+                    fifties = parseInt(change/50);
+                    change= change-(fifties*50); 
+                }
+                if(change>20){
+                    twenties = parseInt(change/20);
+                    change= change-(twenties*20); 
+                }
+                if(change>10){
+                     tens = parseInt(change/10);
+                     change= change-(tens*10); 
+                }
+                if(change>5){
+                     fives = parseInt(change/5);
+                     change= change-(fives*2); 
+                }
+                if(change>2){
+                    twos = parseInt(change/2);
+                    change= change-(twos*2); 
+                }
+                 if(change>=1){
+                   ones = parseInt(change/1);
+                   change= change-(ones*1); 
+                }
+                                
+                window.document.F.t50.value=fifties;
+                window.document.F.t20.value=twenties;
+                window.document.F.t10.value=tens;
+                window.document.F.t5.value=fives;
+                window.document.F.t2.value=twos;
+                window.document.F.t1.value=ones;
+           
+
+               
+           }
+
+          
+        </script>
+    </body>
+  
+</html>

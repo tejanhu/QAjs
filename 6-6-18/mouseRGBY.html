@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <style>
+                	
+        
+                
+                
+        </style>
+    </head>
+
+    <body onmousemove="move()">
+          <span id="A" style="position:absolute">QA Consulting</span>
+          <div style="width:500;height:370;background-color:red;position:absolute;top:100;text-align:center;" onmouseenter="changeRed()"><b>RED</b></div>
+          <div style="width:500;height:370;float:right;position:absolute;top:500;background-color:yellow;text-align:center;" onmouseenter="changeYellow()"><b>YELLOW</b></div>
+          <div style="width:500;height:370;position:fixed;left:80;background-color:green;text-align:center;"  onmouseenter="changeGreen()"><b>GREEN</b></div>
+          <div style="width:500;height:370;top:0;position:fixed;right:80;background-color:blue;text-align:center;"  onmouseenter="changeBlue()"><b>BLUE</b></div>
+
+        <script>
+        
+           
+            var s;
+          function move(){
+             s = window.document.getElementById("A");
+             s.style.top=window.event.clientY;
+             s.style.left=window.event.clientX;
+          }
+
+
+          function changeRed(){
+              
+            s.style.background="red";
+
+          }
+
+          function changeYellow(){
+
+            s.style.background="yellow";
+              
+          }
+
+          function changeGreen(){
+
+            s.style.background="green";
+              
+          }
+
+          function changeBlue(){
+
+            s.style.background="blue";
+              
+          }
+
+          
+
+        </script>
+    </body>
+  
+</html>

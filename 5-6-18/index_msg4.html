@@ -1,0 +1,81 @@
+<html>
+
+    <body>
+          <form name="F">
+             <label>FIRST NO:</label><input name="A"><br>
+             <label>SECOND NO:</label><input name="B"><br>
+             <input type="button" value="+" onclick="Addition()">
+             <input type="button" value="-" onclick="Subtraction()">
+             <input type="button" value="*" onclick="Multiply()">
+             <input type="button" value="/" onclick="Divide()"><br>
+             <label>Result:</label><input name="c" value="">
+        </form>
+
+        <script>
+            var no1,no2,res;                 
+                          
+            function Addition(){
+                if(window.document.F.A.value==""){
+                    window.alert("First Number is missing!");
+                    window.document.F.A.focus();
+                }
+                else if(window.document.F.B.value==""){
+                    window.alert("Second Number is missing!");
+                    window.document.F.B.focus();
+                }
+                else{
+                     no1 = parseInt(window.document.F.A.value);
+                     no2 = parseInt(window.document.F.B.value);
+                     res = no1+no2;
+                     window.document.F.c.value=res;
+                }
+            }
+
+             function Subtraction(){
+                if(window.document.F.A.value==""){
+                    window.alert("First Number is missing!");
+                }
+                else if(window.document.F.B.value==""){
+                    window.alert("Second Number is missing!");
+                }
+                else{
+                     no1 = parseInt(window.document.F.A.value);
+                     no2 = parseInt(window.document.F.B.value);
+                     res = no1-no2;
+                     window.document.F.c.value=res;
+                }
+            }
+
+             function Multiply(){
+                if(window.document.F.A.value==""){
+                    window.alert("First Number is missing!");
+                }
+                else if(window.document.F.B.value==""){
+                    window.alert("Second Number is missing!");
+                }
+                else{
+                     no1 = parseInt(window.document.F.A.value);
+                     no2 = parseInt(window.document.F.B.value);
+                     res = no1*no2;
+                     window.document.F.c.value=res;
+                }
+            }
+
+             function Divide(){
+                if(window.document.F.A.value==""){
+                    window.alert("First Number is missing!");
+                }
+                else if(window.document.F.B.value==""){
+                    window.alert("Second Number is missing!");
+                }
+                else{
+                     no1 = parseInt(window.document.F.A.value);
+                     no2 = parseInt(window.document.F.B.value);
+                     res = no1/no2;
+                     window.document.F.c.value=res;
+                }
+            }
+        </script>
+    </body>
+  
+</html>
