@@ -80,7 +80,7 @@
                 </tr>
 
                 <tr id="sci-btns">
-                    <td><input class="btn" id="bSin" type="button" value="SIN" onclick="sin()"></td>
+                    <td><input class="btn" id="bSin" type="button" value="SIN" onclick="sine()"></td>
                     <td><input class="btn" id="bCos" type="button" value="COS" onclick="cosine()"></td>
                     <td><input class="btn" id="bTan" type="button" value="TAN" onclick="tan()"></td>
                 </tr>
@@ -174,15 +174,12 @@ function divide(){
 
 }
 function cosine(){
+    alert("helloCos");
+    // window.document.F.input_data.value=math.parseInt(parseInt(window.document.F.input_data.value));
+
     w = window.document.F.input_data;
     no1 = w.value;
-    if(no1.includes(".")){
-       no1 = parseFloat(w.value);
-
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+    no1 = parseFloat(w.value); 
 
   // no1 = parseInt(w.value);
   operator = "COSINE";
@@ -190,15 +187,10 @@ function cosine(){
 
 }
 function sine(){
+    alert("helloSin");
     w = window.document.F.input_data;
     no1 = w.value;
-    if(no1.includes(".")){
-       no1 = parseFloat(w.value);
-
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+    no1 = parseFloat(w.value); 
 
   // no1 = parseInt(w.value);
   operator = "SINE";
@@ -206,15 +198,11 @@ function sine(){
 
 }
 function tan(){
+    alert("helloTan");               
     w = window.document.F.input_data;
     no1 = w.value;
-    if(no1.includes(".")){
-       no1 = parseFloat(w.value);
 
-   }
-   else{
-       no1 = parseInt(w.value);
-   } 
+    no1 = parseFloat(w.value);
 
   // no1 = parseInt(w.value);
   operator = "TAN";
@@ -237,7 +225,7 @@ function operations(){
      case'add':
      if(no1.includes(".") && no2.includes(".")){
          no2 = parseFloat(w.value);
-         res = (parseFloat(no1)+no2).toFixed(1);
+         res = (parseFloat(no1)+no2);
      }
      else{
         no2 = parseInt(w.value);
@@ -254,7 +242,7 @@ function operations(){
     if(no1.includes(".") && no2.includes(".")){
      no1 = parseFloat(w.value);
      no2 = parseFloat(w.value);
-     res = (parseFloat(no1)-no2).toFixed(1);
+     res = (parseFloat(no1)-no2);
  }
  else{
      no1 = parseInt(w.value);
@@ -272,7 +260,7 @@ function operations(){
  if(no1.includes(".") && no2.includes(".")){
      no1 = parseFloat(w.value);
      no2 = parseFloat(w.value);
-     res = (parseFloat(no1)*no2).toFixed(1);
+     res = (parseFloat(no1)*no2);
  }
  else{
      no1 = parseInt(w.value);
@@ -290,7 +278,7 @@ function operations(){
  if(no1.includes(".") && no2.includes(".")){
      no1 = parseFloat(w.value);
      no2 = parseFloat(w.value);
-     res = (parseFloat(no1)/no2).toFixed(1);
+     res = (parseFloat(no1)/no2);
  }
  else{
      no1 = parseInt(w.value);
@@ -304,52 +292,40 @@ function operations(){
  break;
 
  case 'COSINE':
+   // console.log(document.getElementById("input_field")+20.00);
+   
+   no1 = Math.cos(parseFloat(no1));
 
- if(res.includes(".")){
-   res = Math.cos(parseFloat(w.value)).toFixed(1);
-}
-else{
-   res = Math.cos(parseInt(no1/no2)).toFixed(1);
-}  
-w.value = res;
-overwrite = true;
-convertNumToText();
+ // if(no2.includes(".")){
+ //     no2 = Math.cos(parseFloat(w.value));
+ // }
+ 
+ w.value = no1;
+ overwrite = true;
+ convertNumToText();
 
-break;
+ break;
 
-case 'SINE':
+ case 'SINE':
 
-if(res.includes(".")){
-   res = Math.sin(parseFloat(w.value)).toFixed(1);
-}
-else{
-   res = Math.sin(parseInt(no1/no2)).toFixed(1);
-}  
-w.value = res;
-overwrite = true;
-convertNumToText();
+ 
+ no1 = Math.sin(parseFloat(no1));
+ 
+ w.value = no1;
+ overwrite = true;
+ convertNumToText();
 
-break;
+ break;
 
-case 'TAN':
+ case 'TAN':
 
-if(res.includes(".")){
-   res = Math.tan(parseFloat(w.value)).toFixed(1);
-}
-else{
-   res = Math.tan(parseInt(no1/no2)).toFixed(1);
-}  
-w.value = res;
-overwrite = true;
-convertNumToText();
+ no1 = Math.tan(parseFloat(no1));
 
-break;
+ w.value = no1;
+ overwrite = true;
+ convertNumToText();
 
-
-
-
-
-
+ break;
 
 }      
 }
